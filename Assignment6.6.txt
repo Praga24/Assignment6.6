@@ -1,0 +1,21 @@
+1.Difference between FIFO and Capacity scheduler:
+FIFO Scheduler
+The FIFO Scheduler follows first in first out stratedgy i.e, it places the applications in a queue and executes them.
+A small file has to wait until the large file preceding it in the queue to execute first which is time inefficient.
+	
+Capactiy Scheduler
+Capacity Scheduler allocates shared cluster resources among users and groups.
+The idea is to share the available resources in the Hadoop cluster among multiple organizations 
+who collectively fund the cluster based on their needs.
+It provides cost effective access to Hadoop clusters for the organizations.
+
+
+2.Limitations of hadoop 1.x and how they were overcome in hadoop 2.x:
+In hadoop1.x only single namenode manages the entire namespace i.e., it has a single point of failure, If the name node 
+fails the entire cluster fails.
+In hadoop2.x Multiple namenodes manages different portions of the namespace.(HDFS Federation)
+Multiple namenodes are present in an active-standby mode.(High Availability)
+In case of failure of the active namenode the standby namenode takes care of the cluster.
+In hadoop 2.x the number of nodes that can fit into the cluster has been scaled up from 4000 
+to 10000.
+
